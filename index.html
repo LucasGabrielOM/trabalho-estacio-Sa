@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AULA CSS 1</title>
+    <link rel="stylesheet" href="style.css">
+   
+<head>
+<body>
+
+    <div class="header-principal">
+     <div class="pesquisa">
+            <span class="icone-pesquisa">&#x1F50D;</span> 
+            </div>
+    <div class="logo">
+            BRECHO STORE 70+´s
+    </div>
+    <div class="icones-usuario">
+            <span class="icone-perfil">&#x1F464;</span> 
+            <span class="icone-carrinho">&#x1F6D2;<span class="contador-carrinho">0</span></span>
+            </div>
+    </div>
+
+            <nav class="menu-principal">
+        <ul>
+            <li><a href="#">VESTUÁRIO</a></li>
+            <li><a href="#">ACESSÓRIOS</a></li>
+            <li><a href="#">NO PRECINHO</a></li>
+            <li><a href="#">DÉCADAS</a></li>
+            
+        </ul>
+            </nav>
+        <div class="barra-promocao">
+            10% OFF NA 1ª COMPRA COM O CUPOM NOSTALGIA10 | NOVIDADE TODA SEMANA | FRETE GRÁTIS NAS COMPRAS ACIMA DE R$200
+        </div>
+
+<section class="beneficios-compra">
+     <h2>Por Que Comprar na BRECHO STORE 70+´s?</h2>
+     <ul class="lista-beneficios">
+        <li>Compra 100% Segura</li>
+        <li>Troca Grátis em até 30 dias</li>
+        <li>Frete Rápido para todo o Brasil</li>
+        <li>Mais de 500 Marcas Exclusivas</li>
+        <li>Suporte por Chat 24 horas</li>
+    </ul>
+</section>
+
+<section class="passos-compra">
+    <h2>Guia Rápido: 3 Passos para Receber Seu Pedido</h2>
+    <ol class="lista-passos">
+        <li>Adicione seus itens favoritos ao carrinho de compras.</li>
+        <li>Prossiga para o checkout e preencha o endereço de entrega e pagamento.</li>
+        <li>Aguarde a confirmação do pedido e receba o código de rastreio por e-mail!</li>
+    </ol>
+</section>
+
+<section class="secao-categorias">
+    <h2>Compre por Década</h2>
+    
+    <div class="galeria-categorias">
+        <a href="https://github.com/LucasGabrielOM/SITE-LOJA-BRECHO" target="_blank" class="link-categoria">
+            <img src="imagens/anos-70s.jpeg" alt="Foto de uma modelo usando um cropped azul, representando a categoria Partes de Cima.">
+            <span class="titulo-categoria">ANOS 70s</span>
+            </a>
+
+        <a href="https://github.com/LucasGabrielOM/SITE-LOJA-BRECHO" target="_blank" class="link-categoria">
+            <img src="imagens/anos-80s.jpeg" alt="Foto de uma pessoa usando calça larga escura e sandálias, representando a categoria Partes de Baixo.">
+            <span class="titulo-categoria">ANOS 80s</span>
+        </a>
+
+        <a href="https://github.com/LucasGabrielOM/SITE-LOJA-BRECHO" target="_blank" class="link-categoria">
+            <img src="imagens/anos-90s.jpeg" alt="Foto de uma pessoa usando um vestido roxo de manga longa, representando a categoria Peça Única.">
+            <span class="titulo-categoria">ANOS 90s</span>
+        </a>
+
+        <a href="https://github.com/LucasGabrielOM/SITE-LOJA-BRECHO" target="_blank" class="link-categoria">
+            <img src="imagens/anos-2000.jpeg" alt="Foto de uma pessoa com jeans de corte reto e tênis, representando a categoria Corte Reto.">
+            <span class="titulo-categoria">ANOS 2000s</span>
+        </a>
+    </div>
+</section>
+
+<section class="secao-tabela-tamanhos">
+    <h2>Guia de Tamanhos (Coleção Vintage)</h2>
+    
+    <table class="tabela-medidas">
+        <thead>
+            <tr>
+                <th>Tamanho</th>
+                <th>Busto (cm)</th>
+                <th>Cintura (cm)</th>
+                <th>Quadril (cm)</th>
+            </tr>
+        </thead>
+        
+        <tbody>
+            <tr>
+                <td>P (36/38)</td>
+                <td>80 - 84</td>
+                <td>60 - 64</td>
+                <td>88 - 92</td>
+            </tr>
+            <tr>
+                <td>M (40/42)</td>
+                <td>86 - 90</td>
+                <td>66 - 70</td>
+                <td>94 - 98</td>
+            </tr>
+            <tr>
+                <td>G (44/46)</td>
+                <td>92 - 96</td>
+                <td>72 - 76</td>
+                <td>100 - 104</td>
+            </tr>
+            <tr>
+                <td rowspan="2">Atenção </td> 
+                <td colspan="2" class="destaque">Medidas para PEÇAS ÚNICAS (Vestidos)</td> 
+                <td>Siga a cintura</td>
+            </tr>
+        </tbody>
+        
+        <tfoot>
+            <tr>
+                <td colspan="4">Ficou na dúvida? Fale com nosso suporte!</td>
+                
+            </tr>
+        </tfoot>
+    </table>
+</section>
+
+  <section class="secao-formulario-cadastro">
+    <h1>Crie Sua Conta Fashion!</h1>
+    <h4>Receba novidades exclusivas e personalize sua experiência.</h4>
+    
+    <form action="/criar-conta" method="POST" class="form-cadastro">
+        <div class="campo-grupo input-completo">
+            <label for="login-email">E-mail (Login):</label>
+            <input 
+                type="email" 
+                id="login-email" 
+                name="login" 
+                placeholder="seu.email@exemplo.com" 
+                required
+            >
+            </div>
+
+        <div class="campo-grupo grupo-radio">
+            <p class="titulo-grupo">Gênero (Para sugestões de estilo):</p>
+            <div class="opcoes-radio">
+                <div><input type="radio" name="genero" id="genero-femi" value="feminino"> <label for="genero-femi">Feminino</label></div>
+                <div><input type="radio" name="genero" id="genero-masc" value="masculino"> <label for="genero-masc">Masculino</label></div>
+                <div><input type="radio" name="genero" id="genero-nao" value="prefiro não informa"> <label for="genero-nao">Prefiro não informa</label></div>
+                <div><input type="radio" name="genero" id="genero-fashion" value="fashion"> <label for="genero-corinthiano">Fashion</label></div>
+            </div>
+        </div>
+
+        <div class="campo-grupo grupo-checkbox">
+            <p class="titulo-grupo">Interesses (Marque quantos quiser):</p>
+            <div class="opcoes-checkbox">
+                <div><input type="checkbox" name="interesse_moda" id="check-moda" value="MODA"> <label for="check-moda">ALL STAR</label></div>
+                <div><input type="checkbox" name="interesse_futebol" id="check-futebol" value="FUTEBOL"> <label for="check-futebol">CALÇAS JEANS</label></div>
+                <div><input type="checkbox" name="interesse_acessorios" id="check-acessorios" value="ACESSORIOS"> <label for="check-acessorios">ACESSÓRIOS</label></div>
+                <div><input type="checkbox" name="interesse_academia" id="check-academia" value="ACADEMIA"> <label for="check-academia">CAMISAS OVERSIZED</label></div>
+            </div>
+        </div>
+
+        <div class="campo-grupo select-completo">
+            <label for="estado-select">Estado:</label>
+            <select name="estado" id="estado-select">  
+ <Option value="">CE</Option>
+            <Option value="">BA</Option>
+            <Option value="">MG</Option>
+            <Option value="">SP</Option>
+            <Option value="">SC</Option>
+            <Option value="">RJ</Option>
+            <Option value="">MS</Option>
+            <Option value="">RS</Option>
+            <Option value="">AC</Option>
+            <Option value="">MA</Option>
+            <Option value="">PE</Option>
+            <Option value="">SE</Option>
+            <Option value="">ES</Option>
+            <Option value="">RJ</Option>
+            <Option value="">TO</Option>
+            <Option value="">MS</Option>
+            <Option value="">GO</Option>
+            <Option value="">DF</Option>
+            <Option value="">PR</Option>
+            <Option value="">PA</Option>
+            <Option value="">RO</Option>
+            <Option value="">AM</Option>
+            <Option value="">AL</Option>
+            <Option value="">PI</Option>
+            <Option value="">RN</Option>
+            <Option value="">ESTRANGEIRO</Option>
+                </select> 
+        </div>
+
+        <div class="campo-grupo textarea-completo">
+            <label for="observacao-area">Observação:</label>
+            <textarea name="observacao" id="observacao-area" rows="4"></textarea>
+            </div>
+        
+        <button type="submit" class="botao-enviar">Criar Minha Conta</button>
+        </form> 
+</section>
+
+</body>
+</html>
+
+</body>
+</html>
