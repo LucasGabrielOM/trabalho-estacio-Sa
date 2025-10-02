@@ -1,0 +1,505 @@
+/*
+trabalha seletores
+classe (.) = utilizar quantas vezes eu quiser!
+id (#) = devo utilizar apenas uma vez!
+tags por exemplo: p, h1, table,  forms etc
+
+*/
+
+/* Configurações básicas e cores */
+:root {
+    --cor-principal: #000; /* Preto */
+    --cor-secundaria: #fff; /* Branco */
+    --cor-promocao: #f8c9c4; /* Salmão/Rosa Claro */
+}
+
+/* Remove margens e paddings padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif; /* Use a fonte que desejar */
+}
+
+/* --- ESTILOS DO HEADER/CABEÇALHO --- */
+
+/* Barra Principal (Fundo Preto) */
+.header-principal {
+    background-color: var(--cor-principal);
+    color: var(--cor-secundaria);
+    padding: 15px 50px; /* Espaçamento interno */
+    display: flex;
+    justify-content: space-between; /* Espaça logo dos cantos */
+    align-items: center; /* Centraliza verticalmente */
+    height: 80px; /* Altura da barra */
+}
+
+/* Logo (Centralizado e com fonte destacada) */
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* Ícones e Pesquisa */
+.pesquisa, .icones-usuario {
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+}
+
+/* Ícone de carrinho */
+.icone-carrinho {
+    margin-left: 15px;
+    position: relative;
+}
+
+/* Contador do carrinho */
+.contador-carrinho {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    border-radius: 50%;
+    padding: 1px 5px;
+    line-height: 1;
+}
+
+/* --- BARRA DE NAVEGAÇÃO (Menu de Links) --- */
+
+.menu-principal {
+    background-color: var(--cor-principal); /* Preto */
+    padding: 10px 0;
+    border-top: 1px solid #333; /* Linha sutil de separação */
+}
+
+.menu-principal ul {
+    list-style: none; /* Remove bolinhas */
+    display: flex;
+    justify-content: center; /* Centraliza os links no meio */
+    gap: 30px; /* Espaço entre os links */
+}
+
+.menu-principal a {
+    text-decoration: none; /* Remove sublinhado */
+    color: var(--cor-secundaria); /* Cor branca */
+    font-size: 14px;
+    font-weight: 500;
+    padding: 5px;
+}
+
+.menu-principal a:hover {
+    color: #ccc; /* Muda a cor ao passar o mouse */
+}
+
+/* --- BARRA DE PROMOÇÃO (Faixa Salmão) --- */
+
+.barra-promocao {
+    background-color: var(--cor-promocao);
+    color: var(--cor-principal);
+    text-align: center;
+    padding: 8px 10px;
+    font-size: 12px;
+    font-weight: bold;
+    /* Adiciona barras verticais sutis entre as frases */
+    white-space: nowrap; /* Impede quebras de linha indesejadas */
+}
+
+
+/* --- ESTILOS PARA A SEÇÃO "BENEFÍCIOS DE COMPRA" (UL) --- */
+
+.beneficios-compra {
+    padding: 40px 20px;
+    background-color: #ffffff; /* Fundo cinza claro para destacar a seção */
+    text-align: center;
+}
+
+.beneficios-compra h2 {
+    margin-bottom: 25px;
+    font-size: 20px;
+    color: #000000;
+}
+
+.lista-beneficios {
+    list-style: none; /* REMOVE as bolinhas padrão (marcadores) */
+    display: flex; /* Habilita o Flexbox para alinhar os itens horizontalmente */
+    justify-content: center; /* Centraliza os itens na seção */
+    flex-wrap: wrap; /* Permite que os itens quebrem a linha em telas menores */
+    gap: 30px; /* Espaço entre os itens da lista */
+}
+
+.lista-beneficios li {
+    font-size: 14px;
+    color: #555;
+    max-width: 200px; /* Limita a largura de cada item para melhor leitura */
+    position: relative;
+    padding-top: 30px; /* Espaço para simular um ícone acima */
+    font-weight: 500;
+}
+.lista-beneficios li::before {
+    content: ''; /* Deixamos vazio para usar a imagem de fundo */
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza o ícone */
+    
+    /* Configurações da imagem */
+    display: block;
+    width: 30px;    /* Largura do ícone */
+    height: 30px;   /* Altura do ícone */
+    background-size: contain; /* Garante que a imagem caiba */
+    background-repeat: no-repeat;
+}
+
+/* 1. ESTILO DO PRIMEIRO BENEFÍCIO: Compra 100% Segura */
+.lista-beneficios li:nth-child(1)::before {
+    /* MUDAR AQUI: Caminho para o ícone de CADEADO/SEGURANÇA */
+    background-image: url('imagens/estrela-logo-beneficios.jpg'); 
+}
+
+/* 2. ESTILO DO SEGUNDO BENEFÍCIO: Troca Grátis em até 30 dias */
+.lista-beneficios li:nth-child(2)::before {
+    /* MUDAR AQUI: Caminho para o ícone de TROCA/SETAS */
+    background-image: url('imagens/estrela-logo-beneficios.jpg'); 
+}
+
+/* 3. ESTILO DO TERCEIRO BENEFÍCIO: Frete Rápido para todo o Brasil */
+.lista-beneficios li:nth-child(3)::before {
+    /* MUDAR AQUI: Caminho para o ícone de CAMINHÃO/ENVIO */
+    background-image: url('imagens/estrela-logo-beneficios.jpg'); 
+}
+
+/* 4. ESTILO DO QUARTO BENEFÍCIO: Mais de 500 Marcas Exclusivas */
+.lista-beneficios li:nth-child(4)::before {
+    /* MUDAR AQUI: Caminho para o ícone de ETIQUETA/TAG */
+    background-image: url('imagens/estrela-logo-beneficios.jpg'); 
+}
+
+/* 5. ESTILO DO QUINTO BENEFÍCIO: Suporte por Chat 24 horas */
+.lista-beneficios li:nth-child(5)::before {
+    /* MUDAR AQUI: Caminho para o ícone de BALÃO DE CHAT */
+    background-image: url('imagens/estrela-logo-beneficios.jpg'); 
+}
+
+/* --- ESTILOS PARA A SEÇÃO "PASSOS PARA COMPRA" (OL) --- */
+
+.passos-compra {
+    padding: 50px 20px;
+    max-width: 800px; /* Limita a largura para centralizar o conteúdo do guia */
+    margin: 0 auto;
+}
+
+.passos-compra h2 {
+    text-align: center;
+    margin-bottom: 35px;
+    font-size: 24px;
+    color: #000;
+}
+
+.lista-passos {
+    list-style-type: none; /* Remove a numeração padrão para customizar */
+    counter-reset: passo-contador; /* Inicia o contador para a numeração customizada */
+    padding-left: 0;
+}
+
+.lista-passos li {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #f9f9f9; /* Fundo para cada passo */
+    border-radius: 8px;
+    border-left: 5px solid #000; /* Uma linha vertical de destaque */
+    font-size: 16px;
+    color: #333;
+    position: relative; /* Necessário para posicionar o número */
+}
+
+/* Pseudo-elemento para a NUMERAÇÃO ORDENADA customizada (1, 2, 3...) */
+.lista-passos li::before {
+    counter-increment: passo-contador; /* Aumenta o contador para o próximo número */
+    content: counter(passo-contador); /* Exibe o número do contador */
+    
+    /* Estilização do número */
+    position: absolute;
+    top: -15px; /* Posição acima do bloco */
+    left: 20px;
+    background-color: #000; /* Fundo preto para o número */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 50%; /* Faz um círculo */
+    font-weight: bold;
+    font-size: 14px;
+}
+/* --- ESTILOS PARA SEÇÃO DE CATEGORIAS VISUAIS --- */
+
+.secao-categorias {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.secao-categorias h2 {
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #000;
+}
+
+/* 1. Layout de 4 Blocos (2x2) */
+.galeria-categorias {
+    display: grid;
+    /* Define o layout em duas colunas de tamanhos iguais */
+    grid-template-columns: 1fr 1fr; 
+    gap: 15px; /* Espaço entre as imagens */
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* 2. Estilo do Link e da Imagem */
+.link-categoria {
+    display: block; /* Garante que o link ocupe todo o espaço do grid */
+    text-decoration: none;
+    position: relative; /* CRUCIAL para posicionar o título (span) sobre a imagem */
+    overflow: hidden; /* Garante que a imagem se ajuste ao contêiner */
+}
+
+.link-categoria img {
+    width: 100%;       /* A imagem preenche 100% da largura do bloco */
+    
+    /* AS MUDANÇAS CHAVE ESTÃO AQUI: */
+    height: 300px;     /* Força todas as imagens a terem a mesma altura (ex: 300px) */
+    object-fit: cover; /* Garante que a imagem cubra o espaço definido SEM ser distorcida */
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.link-categoria:hover img {
+    transform: scale(1.05); /* Zoom sutil ao passar o mouse */
+}
+
+/* 3. Estilo do Título Sobreposto */
+.titulo-categoria {
+    position: absolute;
+    bottom: 20px; /* Distância da parte inferior da imagem */
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: white; 
+    
+    /* Para o efeito de texto em destaque (similar ao da foto) */
+    font-size: 24px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    
+    /* Efeito de sombra no texto (simulando a borda branca no texto) */
+    text-shadow: 
+        -2px -2px 0 #000, 
+        2px -2px 0 #000, 
+        -2px 2px 0 #000, 
+        2px 2px 0 #000, 
+        0 0 5px rgba(255, 255, 255, 0.8); /* Sombra branca leve para destacar */
+}
+
+/* ---------------------------------------------------------------- */
+/* --- ESTILOS PARA A SEÇÃO E TABELA DE MEDIDAS --- */
+/* ---------------------------------------------------------------- */
+
+.secao-tabela-tamanhos {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.secao-tabela-tamanhos h2 {
+    margin-bottom: 30px;
+    font-size: 24px;
+    color: #333;
+}
+
+.tabela-medidas {
+    width: 90%; 
+    max-width: 800px;
+    margin: 0 auto;
+    border-collapse: collapse; /* Funçao: Remove o espaçamento entre as bordas das células, deixando a borda única. */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Funçao: Adiciona uma sombra sutil ao redor da tabela. */
+}
+
+/* Estilo para as Células de Cabeçalho (<th>) */
+.tabela-medidas th {
+    background-color: #000; /* Funçao: Fundo preto, seguindo o estilo do seu cabeçalho. */
+    color: #fff;
+    padding: 15px 10px;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+/* Estilo para as Células de Dados (<td>) */
+.tabela-medidas td {
+    padding: 12px 10px;
+    border: 1px solid #ddd; /* Funçao: Adiciona uma borda cinza clara e fina. */
+    text-align: center;
+    color: #b60000;
+}
+
+/* Estilo para as Linhas Ímpares (Fundo Zebrado) */
+.tabela-medidas tbody tr:nth-child(odd) {
+    background-color: #f9f9f9; /* Funçao: Adiciona um fundo mais claro às linhas ímpares (efeito zebrado), melhorando a leitura. */
+}
+
+/* Estilo para as Células que usam COLS PAN e ROWS PAN (Destaque) */
+.tabela-medidas .destaque {
+    background-color: #f0cf17; /* Funçao: Cor salmão/rosa claro (do seu barra-promocao) para destaque. */
+    font-weight: bold;
+    color: #000;
+}
+
+.tabela-medidas .destaque-final {
+    background-color: #e0e0e0;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Estilo para o Rodapé da Tabela (tfoot) */
+.tabela-medidas tfoot td {
+    background-color: #000000;
+    font-size: 12px;
+    font-style: italic;
+    color: #ffffff;
+    border-top: 2px solid #ccc; /* Funçao: Linha dupla para separar o corpo do rodapé. */
+}
+
+/* --- ESTILOS DO FORMULÁRIO DE CADASTRO --- */
+
+.secao-formulario-cadastro {
+    padding: 60px 20px;
+    background-color: #f8c9c4; /* Cor salmão/rosa claro (da sua barra de promoção) para destacar */
+    text-align: center;
+}
+
+.secao-formulario-cadastro h1, .secao-formulario-cadastro h4 {
+    color: #000;
+    margin-bottom: 5px;
+}
+
+.form-cadastro {
+    max-width: 900px; /* Aumentado para ter mais espaço em largura */
+    margin: 30px auto; /* Centraliza o formulário */
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    
+    display: flex; /* Habilita Flexbox para organizar os campos */
+    flex-wrap: wrap; /* Permite que os campos quebrem para a próxima linha */
+    justify-content: space-between; /* Espaça os grupos de campos horizontalmente */
+    gap: 20px; /* Espaço entre os grupos de campos */
+    text-align: left; /* Alinha o conteúdo interno à esquerda */
+}
+
+.campo-grupo {
+    margin-bottom: 0; /* Remove a margem inferior padrão aqui, controlamos com o gap */
+    flex-basis: calc(50% - 10px); /* Ocupa metade da largura, considerando o gap */
+}
+
+/* Campos de input/select/textarea que devem ocupar uma linha inteira */
+.campo-grupo.input-completo,
+.campo-grupo.textarea-completo,
+.campo-grupo.select-completo {
+    flex-basis: 100%; /* Faz esses campos ocuparem a linha inteira */
+}
+
+.campo-grupo label, .campo-grupo .titulo-grupo {
+    display: block; 
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+    font-size: 14px;
+}
+
+/* Estilo dos Inputs de Texto e E-mail */
+.campo-grupo input[type="email"],
+.campo-grupo input[type="text"],
+.campo-grupo select,
+.campo-grupo textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; 
+    font-size: 15px;
+}
+
+.campo-grupo input[type="email"]:focus,
+.campo-grupo input[type="text"]:focus,
+.campo-grupo select:focus,
+.campo-grupo textarea:focus {
+    border-color: #cc0000; 
+    outline: none; 
+}
+
+/* Estilo do Dropdown (Select) */
+.campo-grupo select {
+    appearance: none; 
+    background-color: #fff;
+    cursor: pointer;
+}
+
+/* Estilo do Textarea */
+.campo-grupo textarea {
+    resize: vertical; 
+    min-height: 80px; /* Altura mínima para o textarea */
+}
+
+/* Estilo dos Radio Buttons e Checkboxes (Ajustes para alinhamento) */
+.opcoes-radio, .opcoes-checkbox {
+    display: flex;
+    flex-direction: column; /* Faz com que as opções fiquem uma abaixo da outra */
+    gap: 5px; /* Espaçamento entre as opções */
+}
+
+.opcoes-radio div, .opcoes-checkbox div {
+    display: flex; /* Alinha o input e o label na mesma linha */
+    align-items: center;
+}
+
+.opcoes-radio input[type="radio"],
+.opcoes-checkbox input[type="checkbox"] {
+    margin-right: 8px; /* Espaço entre o input e o label */
+}
+
+/* Estilo do Botão de Envio (Ocupa a linha inteira) */
+.botao-enviar {
+    width: 100%; 
+    padding: 12px;
+    background-color: #cc0000; 
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px; /* Espaço acima do botão */
+}
+
+.botao-enviar:hover {
+    background-color: #a30000;
+}
+
+/* Responsividade: Em telas menores, os campos ficam em uma única coluna */
+@media (max-width: 600px) {
+    .form-cadastro {
+        flex-direction: column; /* Itens em coluna */
+        gap: 15px; /* Menos espaço */
+    }
+    .campo-grupo {
+        flex-basis: 100%; /* Ocupa 100% da largura */
+    }
+
+}
+/* 4. Layout em Celulares (Responsividade) */
+@media (max-width: 768px) {
+    .galeria-categorias {
+        /* Em telas pequenas, mostra 1 coluna em vez de 2 */
+        grid-template-columns: 1fr; 
+    }
+}
